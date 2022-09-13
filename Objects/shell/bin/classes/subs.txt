@@ -38,6 +38,62 @@ modulkoneksi,process_globals,0,1,3,8
 
 
 
+profile,activity_create,1,0,18,22
+
+
+
+profile,activity_pause,0,0,28,30
+
+
+
+profile,activity_resume,0,0,24,26
+
+
+
+profile,globals,0,1,12,16
+
+
+
+profile,persyaratan_click,0,0,32,35
+
+
+
+profile,process_globals,0,1,6,10
+
+
+
+tambahdata,activity_create,1,0,26,37
+,button1,,panel1,,pnlpersyaratan,,pnltambahpersyaratan,,xclv,modulkoneksi,results,modulkoneksi,mhandler,,xui,,lblfile,,lblpersyaratan
+,button1,,panel1,,pnlpersyaratan,,pnltambahpersyaratan,,xclv,modulkoneksi,results,,lblfile,,lblpersyaratan
+,showitem,modulkoneksi,koneksi
+tambahdata,showitem,1,0,47,71
+,xclv,modulkoneksi,results,modulkoneksi,mhandler,,xui,,button1,,lblfile,,lblpersyaratan
+modulkoneksi,results,,button1,,lblfile,,lblpersyaratan
+modulkoneksi,koneksi
+tambahdata,activity_pause,0,0,43,45
+
+
+
+tambahdata,activity_resume,0,0,39,41
+
+
+
+tambahdata,btnback_click,0,0,78,81
+,pnlpersyaratan,,pnltambahpersyaratan
+
+
+tambahdata,btntambahdata_click,0,0,73,76
+,pnlpersyaratan,,pnltambahpersyaratan
+
+
+tambahdata,globals,0,1,12,24
+
+
+
+tambahdata,process_globals,0,1,6,10
+
+
+
 starter,application_error,0,0,27,29
 
 
@@ -59,26 +115,6 @@ starter,service_start,0,0,18,20
 
 
 starter,service_taskremoved,0,0,22,24
-
-
-
-profile,activity_create,1,0,18,22
-
-
-
-profile,activity_pause,0,0,28,30
-
-
-
-profile,activity_resume,0,0,24,26
-
-
-
-profile,globals,0,1,12,16
-
-
-
-profile,process_globals,0,1,6,10
 
 
 

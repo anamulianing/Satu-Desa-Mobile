@@ -1,12 +1,12 @@
 ﻿B4A=true
-Group=Apps Group
+Group=Default Group
 ModulesStructureVersion=1
 Type=Activity
 Version=11.8
 @EndOfDesignText@
 #Region  Activity Attributes 
 	#FullScreen: False
-	#IncludeTitle: False
+	#IncludeTitle: True
 #End Region
 
 Sub Process_Globals
@@ -32,5 +32,10 @@ Sub Activity_Resume
 End Sub
 
 Sub Activity_Pause (UserClosed As Boolean)
+ 
+End Sub
 
+Private Sub Persyaratan_Click
+	Activity.Finish
+	StartActivity(TambahData)
 End Sub

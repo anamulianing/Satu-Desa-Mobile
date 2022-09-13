@@ -48,9 +48,10 @@ public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.
 public static RemoteObject _mhandler = RemoteObject.declareNull("mysql.mysqlhandler");
 public static RemoteObject _results = RemoteObject.declareNull("mysql.mysqlhandler.ResultSetWrapper");
 public static b4a.example.main _main = null;
-public static b4a.example.starter _starter = null;
 public static b4a.example.profile _profile = null;
+public static b4a.example.tambahdata _tambahdata = null;
+public static b4a.example.starter _starter = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Main",Debug.moduleToString(b4a.example.main.class),"MHandler",modulkoneksi._mhandler,"Profile",Debug.moduleToString(b4a.example.profile.class),"ResultS",modulkoneksi._results,"Starter",Debug.moduleToString(b4a.example.starter.class)};
+		return new Object[] {"Main",Debug.moduleToString(b4a.example.main.class),"MHandler",modulkoneksi._mhandler,"Profile",Debug.moduleToString(b4a.example.profile.class),"ResultS",modulkoneksi._results,"Starter",Debug.moduleToString(b4a.example.starter.class),"TambahData",Debug.moduleToString(b4a.example.tambahdata.class)};
 }
 }
