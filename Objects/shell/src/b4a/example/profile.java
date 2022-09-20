@@ -55,11 +55,13 @@ public boolean isSingleton() {
 		return pcBA;
 	}
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
+public static RemoteObject _lv = RemoteObject.declareNull("anywheresoftware.b4a.objects.ListViewWrapper");
+public static RemoteObject _user = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
 public static b4a.example.main _main = null;
-public static b4a.example.modulkoneksi _modulkoneksi = null;
 public static b4a.example.tambahdata _tambahdata = null;
+public static b4a.example.modulkoneksi _modulkoneksi = null;
 public static b4a.example.starter _starter = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",profile.mostCurrent._activity,"Main",Debug.moduleToString(b4a.example.main.class),"ModulKoneksi",Debug.moduleToString(b4a.example.modulkoneksi.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"TambahData",Debug.moduleToString(b4a.example.tambahdata.class)};
+		return new Object[] {"Activity",profile.mostCurrent._activity,"lv",profile.mostCurrent._lv,"Main",Debug.moduleToString(b4a.example.main.class),"ModulKoneksi",Debug.moduleToString(b4a.example.modulkoneksi.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"TambahData",Debug.moduleToString(b4a.example.tambahdata.class),"user",profile.mostCurrent._user};
 }
 }

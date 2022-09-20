@@ -13,7 +13,7 @@ Sub Process_Globals
 	Dim ResultS As ResultSet
 End Sub
 
-Sub koneksi
+Sub Koneksi
 	'setting koneksi database
 	MHandler.Initialize("meniti.id", "u7753801_sadesa", "u7753801_nurjaman", "Nurjaman24")
 	

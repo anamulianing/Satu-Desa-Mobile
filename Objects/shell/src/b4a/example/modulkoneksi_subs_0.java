@@ -8,10 +8,10 @@ public class modulkoneksi_subs_0 {
 
 public static RemoteObject  _koneksi(RemoteObject _ba) throws Exception{
 try {
-		Debug.PushSubsStack("koneksi (modulkoneksi) ","modulkoneksi",1,_ba,modulkoneksi.mostCurrent,10);
+		Debug.PushSubsStack("Koneksi (modulkoneksi) ","modulkoneksi",3,_ba,modulkoneksi.mostCurrent,10);
 if (RapidSub.canDelegate("koneksi")) { return b4a.example.modulkoneksi.remoteMe.runUserSub(false, "modulkoneksi","koneksi", _ba);}
 ;
- BA.debugLineNum = 10;BA.debugLine="Sub koneksi";
+ BA.debugLineNum = 10;BA.debugLine="Sub Koneksi";
 Debug.ShouldStop(512);
  BA.debugLineNum = 12;BA.debugLine="MHandler.Initialize(\"meniti.id\", \"u7753801_sadesa";
 Debug.ShouldStop(2048);

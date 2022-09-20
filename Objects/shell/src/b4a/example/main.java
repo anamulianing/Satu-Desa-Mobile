@@ -56,6 +56,7 @@ public boolean isSingleton() {
 	}
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
 public static RemoteObject _xui = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper.XUI");
+public static RemoteObject _username = RemoteObject.createImmutable("");
 public static RemoteObject _md = RemoteObject.declareNull("anywheresoftware.b4a.agraham.encryption.CipherWrapper.MessageDigestWrapper");
 public static RemoteObject _bytecon = RemoteObject.declareNull("anywheresoftware.b4a.agraham.byteconverter.ByteConverter");
 public static RemoteObject _passwordhash = null;
@@ -63,11 +64,11 @@ public static RemoteObject _epass = RemoteObject.createImmutable("");
 public static RemoteObject _p = RemoteObject.createImmutable("");
 public static RemoteObject _namapengguna = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
 public static RemoteObject _password = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
-public static b4a.example.modulkoneksi _modulkoneksi = null;
 public static b4a.example.profile _profile = null;
 public static b4a.example.tambahdata _tambahdata = null;
+public static b4a.example.modulkoneksi _modulkoneksi = null;
 public static b4a.example.starter _starter = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",main.mostCurrent._activity,"ByteCon",main.mostCurrent._bytecon,"epass",main.mostCurrent._epass,"md",main.mostCurrent._md,"ModulKoneksi",Debug.moduleToString(b4a.example.modulkoneksi.class),"NamaPengguna",main.mostCurrent._namapengguna,"p",main.mostCurrent._p,"password",main.mostCurrent._password,"passwordhash",main._passwordhash,"Profile",Debug.moduleToString(b4a.example.profile.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"TambahData",Debug.moduleToString(b4a.example.tambahdata.class),"xui",main._xui};
+		return new Object[] {"Activity",main.mostCurrent._activity,"ByteCon",main.mostCurrent._bytecon,"epass",main.mostCurrent._epass,"md",main.mostCurrent._md,"ModulKoneksi",Debug.moduleToString(b4a.example.modulkoneksi.class),"NamaPengguna",main.mostCurrent._namapengguna,"p",main.mostCurrent._p,"Password",main.mostCurrent._password,"passwordhash",main._passwordhash,"Profile",Debug.moduleToString(b4a.example.profile.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"TambahData",Debug.moduleToString(b4a.example.tambahdata.class),"username",main._username,"xui",main._xui};
 }
 }

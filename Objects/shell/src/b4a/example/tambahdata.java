@@ -56,6 +56,7 @@ public boolean isSingleton() {
 	}
 public static RemoteObject __c = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Common");
 public static RemoteObject _xui = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper.XUI");
+public static RemoteObject _cc = RemoteObject.declareNull("anywheresoftware.b4a.phone.Phone.ContentChooser");
 public static RemoteObject _pnltambahpersyaratan = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 public static RemoteObject _pnlpersyaratan = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 public static RemoteObject _xclv = RemoteObject.declareNull("b4a.example3.customlistview");
@@ -63,11 +64,17 @@ public static RemoteObject _lblpersyaratan = RemoteObject.declareNull("anywheres
 public static RemoteObject _lblfile = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper");
 public static RemoteObject _button1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper");
 public static RemoteObject _panel1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.B4XViewWrapper");
+public static RemoteObject _search = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
+public static RemoteObject _txtpersyaratan = RemoteObject.declareNull("anywheresoftware.b4a.objects.EditTextWrapper");
+public static RemoteObject _lblpilihfile = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
+public static RemoteObject _fd = RemoteObject.declareNull("anywheresoftware.b4a.agraham.dialogs.InputDialog.FileDialog");
+public static RemoteObject _imgstr = RemoteObject.createImmutable("");
+public static RemoteObject _btnsave = RemoteObject.declareNull("anywheresoftware.b4a.objects.ButtonWrapper");
 public static b4a.example.main _main = null;
-public static b4a.example.modulkoneksi _modulkoneksi = null;
 public static b4a.example.profile _profile = null;
+public static b4a.example.modulkoneksi _modulkoneksi = null;
 public static b4a.example.starter _starter = null;
   public Object[] GetGlobals() {
-		return new Object[] {"Activity",tambahdata.mostCurrent._activity,"Button1",tambahdata.mostCurrent._button1,"lblfile",tambahdata.mostCurrent._lblfile,"lblpersyaratan",tambahdata.mostCurrent._lblpersyaratan,"Main",Debug.moduleToString(b4a.example.main.class),"ModulKoneksi",Debug.moduleToString(b4a.example.modulkoneksi.class),"Panel1",tambahdata.mostCurrent._panel1,"pnlPersyaratan",tambahdata.mostCurrent._pnlpersyaratan,"pnlTambahPersyaratan",tambahdata.mostCurrent._pnltambahpersyaratan,"Profile",Debug.moduleToString(b4a.example.profile.class),"Starter",Debug.moduleToString(b4a.example.starter.class),"xclv",tambahdata.mostCurrent._xclv,"xui",tambahdata.mostCurrent._xui};
+		return new Object[] {"Activity",tambahdata.mostCurrent._activity,"btnSave",tambahdata.mostCurrent._btnsave,"Button1",tambahdata.mostCurrent._button1,"CC",tambahdata._cc,"fd",tambahdata.mostCurrent._fd,"imgstr",tambahdata.mostCurrent._imgstr,"lblfile",tambahdata.mostCurrent._lblfile,"lblpersyaratan",tambahdata.mostCurrent._lblpersyaratan,"lblPilihFile",tambahdata.mostCurrent._lblpilihfile,"Main",Debug.moduleToString(b4a.example.main.class),"ModulKoneksi",Debug.moduleToString(b4a.example.modulkoneksi.class),"Panel1",tambahdata.mostCurrent._panel1,"pnlPersyaratan",tambahdata.mostCurrent._pnlpersyaratan,"pnlTambahPersyaratan",tambahdata.mostCurrent._pnltambahpersyaratan,"Profile",Debug.moduleToString(b4a.example.profile.class),"search",tambahdata.mostCurrent._search,"Starter",Debug.moduleToString(b4a.example.starter.class),"txtPersyaratan",tambahdata.mostCurrent._txtpersyaratan,"xclv",tambahdata.mostCurrent._xclv,"xui",tambahdata._xui};
 }
 }

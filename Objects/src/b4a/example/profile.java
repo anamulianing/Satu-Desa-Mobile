@@ -345,55 +345,155 @@ public static void initializeProcessGlobals() {
             }
 }
 public anywheresoftware.b4a.keywords.Common __c = null;
+public anywheresoftware.b4a.objects.ListViewWrapper _lv = null;
+public anywheresoftware.b4a.objects.LabelWrapper _user = null;
 public b4a.example.main _main = null;
-public b4a.example.modulkoneksi _modulkoneksi = null;
 public b4a.example.tambahdata _tambahdata = null;
+public b4a.example.modulkoneksi _modulkoneksi = null;
 public b4a.example.starter _starter = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
 RDebugUtils.currentModule="profile";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime}));}
-RDebugUtils.currentLine=720896;
- //BA.debugLineNum = 720896;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=720898;
- //BA.debugLineNum = 720898;BA.debugLine="Activity.LoadLayout(\"Profile\")";
+RDebugUtils.currentLine=589824;
+ //BA.debugLineNum = 589824;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=589826;
+ //BA.debugLineNum = 589826;BA.debugLine="Activity.LoadLayout(\"Profile\")";
 mostCurrent._activity.LoadLayout("Profile",mostCurrent.activityBA);
-RDebugUtils.currentLine=720900;
- //BA.debugLineNum = 720900;BA.debugLine="End Sub";
+RDebugUtils.currentLine=589828;
+ //BA.debugLineNum = 589828;BA.debugLine="listProfile";
+_listprofile();
+RDebugUtils.currentLine=589831;
+ //BA.debugLineNum = 589831;BA.debugLine="user.Text = Main.username";
+mostCurrent._user.setText(BA.ObjectToCharSequence(mostCurrent._main._username /*String*/ ));
+RDebugUtils.currentLine=589832;
+ //BA.debugLineNum = 589832;BA.debugLine="End Sub";
+return "";
+}
+public static String  _listprofile() throws Exception{
+RDebugUtils.currentModule="profile";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "listprofile", false))
+	 {return ((String) Debug.delegate(mostCurrent.activityBA, "listprofile", null));}
+int _i = 0;
+RDebugUtils.currentLine=786432;
+ //BA.debugLineNum = 786432;BA.debugLine="Sub listProfile";
+RDebugUtils.currentLine=786433;
+ //BA.debugLineNum = 786433;BA.debugLine="lv.SingleLineLayout.Label.TextColor = Colors.Blac";
+mostCurrent._lv.getSingleLineLayout().Label.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.Black);
+RDebugUtils.currentLine=786434;
+ //BA.debugLineNum = 786434;BA.debugLine="lv.SingleLineLayout.Label.TextSize = 15";
+mostCurrent._lv.getSingleLineLayout().Label.setTextSize((float) (15));
+RDebugUtils.currentLine=786436;
+ //BA.debugLineNum = 786436;BA.debugLine="ModulKoneksi.Koneksi";
+mostCurrent._modulkoneksi._koneksi /*String*/ (mostCurrent.activityBA);
+RDebugUtils.currentLine=786438;
+ //BA.debugLineNum = 786438;BA.debugLine="lv.Clear";
+mostCurrent._lv.Clear();
+RDebugUtils.currentLine=786440;
+ //BA.debugLineNum = 786440;BA.debugLine="ModulKoneksi.ResultS = ModulKoneksi.MHandler.Quer";
+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/  = (mysql.mysqlhandler.ResultSetWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new mysql.mysqlhandler.ResultSetWrapper(), (java.sql.ResultSet)(mostCurrent._modulkoneksi._mhandler /*mysql.mysqlhandler*/ .Query("SELECT * FROM `tb_akunwarga` INNER JOIN tb_penduduk ON tb_akunwarga.id_penduduk = tb_penduduk.id_penduduk WHERE username = '"+mostCurrent._main._username /*String*/ +"'")));
+RDebugUtils.currentLine=786442;
+ //BA.debugLineNum = 786442;BA.debugLine="For i = 0 To ModulKoneksi.ResultS.RowCount - 1";
+{
+final int step6 = 1;
+final int limit6 = (int) (mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .RowCount()-1);
+_i = (int) (0) ;
+for (;_i <= limit6 ;_i = _i + step6 ) {
+RDebugUtils.currentLine=786443;
+ //BA.debugLineNum = 786443;BA.debugLine="ModulKoneksi.ResultS.Position = i";
+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .setPosition(_i);
+RDebugUtils.currentLine=786444;
+ //BA.debugLineNum = 786444;BA.debugLine="lv.AddSingleLine(\"Nama : \" & ModulKoneksi.Result";
+mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence("Nama : "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("nama")));
+RDebugUtils.currentLine=786445;
+ //BA.debugLineNum = 786445;BA.debugLine="lv.AddSingleLine(\"NIK : \" & ModulKoneksi.ResultS";
+mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence("NIK : "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("nik")));
+RDebugUtils.currentLine=786446;
+ //BA.debugLineNum = 786446;BA.debugLine="lv.AddSingleLine(\"Jenis Kelamin : \" & ModulKonek";
+mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence("Jenis Kelamin : "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("jenis_kelamin")));
+RDebugUtils.currentLine=786447;
+ //BA.debugLineNum = 786447;BA.debugLine="lv.AddSingleLine(\"Tempat Lahir : \" & ModulKoneks";
+mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence("Tempat Lahir : "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("tempat_lahir")));
+RDebugUtils.currentLine=786448;
+ //BA.debugLineNum = 786448;BA.debugLine="lv.AddSingleLine(\"Tanggal Lahir : \" & ModulKonek";
+mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence("Tanggal Lahir : "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("tanggal_lahir")));
+RDebugUtils.currentLine=786449;
+ //BA.debugLineNum = 786449;BA.debugLine="lv.AddSingleLine(\"Agama : \" & ModulKoneksi.Resul";
+mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence("Agama : "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("agama")));
+RDebugUtils.currentLine=786450;
+ //BA.debugLineNum = 786450;BA.debugLine="lv.AddSingleLine(\"Pendidikan : \" & ModulKoneksi.";
+mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence("Pendidikan : "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("pendidikan")));
+RDebugUtils.currentLine=786451;
+ //BA.debugLineNum = 786451;BA.debugLine="lv.AddSingleLine(\"Jenis Pekerjaan : \" & ModulKon";
+mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence("Jenis Pekerjaan : "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("jenis_pekerjaan")));
+RDebugUtils.currentLine=786452;
+ //BA.debugLineNum = 786452;BA.debugLine="lv.AddSingleLine(\"Golongan Darah : \" & ModulKone";
+mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence("Golongan Darah : "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("golongan_darah")));
+RDebugUtils.currentLine=786453;
+ //BA.debugLineNum = 786453;BA.debugLine="lv.AddSingleLine(\"Status Perkawinan : \" & ModulK";
+mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence("Status Perkawinan : "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("status_perkawinan")));
+RDebugUtils.currentLine=786454;
+ //BA.debugLineNum = 786454;BA.debugLine="lv.AddSingleLine(\"Tanggal Perkawinan : \" & Modul";
+mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence("Tanggal Perkawinan : "+BA.NumberToString(mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetInt2("tanggal_perkawinan"))));
+RDebugUtils.currentLine=786455;
+ //BA.debugLineNum = 786455;BA.debugLine="lv.AddSingleLine(\"Status Hubungan dalam Keluarga";
+mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence("Status Hubungan dalam Keluarga : "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("status_hubungan_dalam_keluarga")));
+RDebugUtils.currentLine=786456;
+ //BA.debugLineNum = 786456;BA.debugLine="lv.AddSingleLine(\"Kewarganegaraan : \" & ModulKon";
+mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence("Kewarganegaraan : "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("kewarganegaraan")));
+RDebugUtils.currentLine=786457;
+ //BA.debugLineNum = 786457;BA.debugLine="lv.AddSingleLine(\"No. PASPOR / KITAP : \" & Modul";
+mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence("No. PASPOR / KITAP : "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("no_paspor")+" / "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("no_kitap")));
+RDebugUtils.currentLine=786458;
+ //BA.debugLineNum = 786458;BA.debugLine="lv.AddSingleLine(\"Nama Ayah / Ibu Kandung : \" &";
+mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence("Nama Ayah / Ibu Kandung : "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("ayah")+" / "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("ibu")));
+RDebugUtils.currentLine=786459;
+ //BA.debugLineNum = 786459;BA.debugLine="lv.AddSingleLine(\"Alamat Lengkap : \" & ModulKone";
+mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence("Alamat Lengkap : "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("alamat")+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("rukun_tetangga")+" "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("rukun_warga")+" "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("kecamatan")));
+RDebugUtils.currentLine=786460;
+ //BA.debugLineNum = 786460;BA.debugLine="lv.AddSingleLine(\"Kontak : \" & ModulKoneksi.Resu";
+mostCurrent._lv.AddSingleLine(BA.ObjectToCharSequence("Kontak : "+mostCurrent._modulkoneksi._results /*mysql.mysqlhandler.ResultSetWrapper*/ .GetString2("no_handphone_aktif")));
+ }
+};
+RDebugUtils.currentLine=786463;
+ //BA.debugLineNum = 786463;BA.debugLine="ModulKoneksi.MHandler.Close";
+mostCurrent._modulkoneksi._mhandler /*mysql.mysqlhandler*/ .Close();
+RDebugUtils.currentLine=786464;
+ //BA.debugLineNum = 786464;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
 RDebugUtils.currentModule="profile";
-RDebugUtils.currentLine=851968;
- //BA.debugLineNum = 851968;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=851970;
- //BA.debugLineNum = 851970;BA.debugLine="End Sub";
+RDebugUtils.currentLine=720896;
+ //BA.debugLineNum = 720896;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=720898;
+ //BA.debugLineNum = 720898;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
 RDebugUtils.currentModule="profile";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null));}
-RDebugUtils.currentLine=786432;
- //BA.debugLineNum = 786432;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=786434;
- //BA.debugLineNum = 786434;BA.debugLine="End Sub";
+RDebugUtils.currentLine=655360;
+ //BA.debugLineNum = 655360;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=655362;
+ //BA.debugLineNum = 655362;BA.debugLine="End Sub";
 return "";
 }
 public static String  _persyaratan_click() throws Exception{
 RDebugUtils.currentModule="profile";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "persyaratan_click", false))
 	 {return ((String) Debug.delegate(mostCurrent.activityBA, "persyaratan_click", null));}
-RDebugUtils.currentLine=917504;
- //BA.debugLineNum = 917504;BA.debugLine="Private Sub Persyaratan_Click";
-RDebugUtils.currentLine=917505;
- //BA.debugLineNum = 917505;BA.debugLine="Activity.Finish";
+RDebugUtils.currentLine=851968;
+ //BA.debugLineNum = 851968;BA.debugLine="Private Sub Persyaratan_Click";
+RDebugUtils.currentLine=851969;
+ //BA.debugLineNum = 851969;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=917506;
- //BA.debugLineNum = 917506;BA.debugLine="StartActivity(TambahData)";
+RDebugUtils.currentLine=851970;
+ //BA.debugLineNum = 851970;BA.debugLine="StartActivity(TambahData)";
 anywheresoftware.b4a.keywords.Common.StartActivity(processBA,(Object)(mostCurrent._tambahdata.getObject()));
-RDebugUtils.currentLine=917507;
- //BA.debugLineNum = 917507;BA.debugLine="End Sub";
+RDebugUtils.currentLine=851971;
+ //BA.debugLineNum = 851971;BA.debugLine="End Sub";
 return "";
 }
 }
